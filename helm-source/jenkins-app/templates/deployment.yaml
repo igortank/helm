@@ -118,6 +118,19 @@ spec:
               subPath: {{ .Values.volumeMounts.jenkinsConfigSubPath }}
             - name: {{ .Values.volumes.configMapJenkins.name }}
               mountPath: {{ .Values.volumeMounts.nfcMountPath }}
+            - name: create-pipeline
+              mountPath: /var/jenkins_home/jobs/Test
+      initContainers:
+      - name: code-from-pipeline
+        image: busybox
+        command: ["sh", "-c"]
+        args:  
+          - cp /tmp/config.xml /var/jenkins_home/jobs/Test;
+        volumeMounts:
+        - name: jenkins-test
+          mountPath: /tmp/
+        - name: create-pipeline
+          mountPath: /var/jenkins_home/jobs/Test     
       volumes:
         - name: {{ .Values.volumes.authConfig }}
           configMap:
@@ -129,6 +142,11 @@ spec:
           nfs:
             server: {{ .Values.volumes.nfs.server }}
             path: {{ .Values.volumes.nfs.path }}
+        - name: create-pipeline
+          emptyDir: {}
+        - name: jenkins-test
+          configMap:
+            name: test
 ---
 apiVersion: v1
 kind: ConfigMap
