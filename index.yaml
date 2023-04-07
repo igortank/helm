@@ -3,7 +3,7 @@ entries:
   first-app:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-04-07T10:38:33.190504234Z"
+    created: "2023-04-07T10:59:24.289185363Z"
     description: A Helm chart for Kubernetes
     digest: ce05a365ae046abc9209c9bfe319dc9be4d7d1568339f843ed9677a948fb08fe
     name: first-app
@@ -14,9 +14,9 @@ entries:
   jenkins-app:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-04-07T10:38:33.192492864Z"
+    created: "2023-04-07T10:59:24.295028361Z"
     description: A Helm chart for Kubernetes
-    digest: 924f03b4b9acdfcfb7ce0889bd609d4db6cc16864b02433a10728a8cc491ffa4
+    digest: 49d1782fdba5cd68d5754b3eccaa54c8791493396a64ee5cc202d3416ba9587c
     name: jenkins-app
     type: application
     urls:
@@ -24,7 +24,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-04-07T10:38:33.191591501Z"
+    created: "2023-04-07T10:59:24.292466798Z"
     description: A Helm chart for Kubernetes
     digest: 8488c7ca10a55685e1e74646e63880495c316b03a9e7f2cec297a0b979a59d52
     name: jenkins-app
@@ -32,4 +32,4 @@ entries:
     urls:
     - https://igortank.github.io/helm/helm-releases/jenkins-app-0.1.0.tgz
     version: 0.1.0
-generated: "2023-04-07T10:38:33.189167834Z"
+generated: "2023-04-07T10:59:24.28710932Z"
